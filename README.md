@@ -1,2 +1,1 @@
-# csharp-data-faker
-C# data faker
+# C# Data Faker
