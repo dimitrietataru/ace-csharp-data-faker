@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <!--<LangVersion>10</LangVersion>-->
+
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>AceCSharp.DataFaker</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Dimitrie Tataru</Authors>
+    <Company>A C E</Company>
+    <Description>C# Data Faker</Description>
+    <PackageTags>faker;data-faker;factory;data-factory;bogus</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
