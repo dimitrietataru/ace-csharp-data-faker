@@ -1,5 +1,3 @@
-using System.Reflection;
-
 namespace Ace.CSharp.DataFaker.Internal.Extensions;
 
 internal static partial class TypeExtensions

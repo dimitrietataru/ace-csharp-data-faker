@@ -16,6 +16,10 @@
     <PackageTags>faker;data-faker;factory;data-factory;bogus</PackageTags>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+  </ItemGroup>
+
   <ItemGroup Condition="'$(Configuration)' == 'Debug'">
     <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="6.0.0">
       <PrivateAssets>all</PrivateAssets>
@@ -27,10 +31,6 @@
     <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
       <_Parameter1>Ace.CSharp.DataFaker.Tests</_Parameter1>
     </AssemblyAttribute>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Bogus" Version="34.0.2" />
   </ItemGroup>
 
 </Project>
