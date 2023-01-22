@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ace.CSharp.DataFaker", "Ace.CSharp.DataFaker\Ace.CSharp.DataFaker.csproj", "{C7E62687-E6F6-46D6-AB92-A806A24FD72B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ace.CSharp.DataFaker", "Ace.CSharp.DataFaker\Ace.CSharp.DataFaker.csproj", "{C7E62687-E6F6-46D6-AB92-A806A24FD72B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ace.CSharp.DataFaker.Tests", "Ace.CSharp.DataFaker.Tests\Ace.CSharp.DataFaker.Tests.csproj", "{372B131E-6F99-44E7-895F-7F7A56C797F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ace.CSharp.DataFaker.Sample", "Ace.CSharp.DataFaker.Sample\Ace.CSharp.DataFaker.Sample.csproj", "{4E9D94E6-1547-4022-B28F-4BF2B61E9CB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ace.CSharp.DataFaker.Tests", "Ace.CSharp.DataFaker.Tests\Ace.CSharp.DataFaker.Tests.csproj", "{372B131E-6F99-44E7-895F-7F7A56C797F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{C7E62687-E6F6-46D6-AB92-A806A24FD72B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7E62687-E6F6-46D6-AB92-A806A24FD72B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7E62687-E6F6-46D6-AB92-A806A24FD72B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E9D94E6-1547-4022-B28F-4BF2B61E9CB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E9D94E6-1547-4022-B28F-4BF2B61E9CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E9D94E6-1547-4022-B28F-4BF2B61E9CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E9D94E6-1547-4022-B28F-4BF2B61E9CB1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{372B131E-6F99-44E7-895F-7F7A56C797F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{372B131E-6F99-44E7-895F-7F7A56C797F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{372B131E-6F99-44E7-895F-7F7A56C797F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
