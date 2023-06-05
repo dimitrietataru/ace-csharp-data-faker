@@ -20,7 +20,7 @@ public sealed partial class TypeExtensionsTests
         actual.Should().Be(expected);
     }
 
-    private class SystemStructTypeData : IEnumerable<object[]>
+    private sealed class SystemStructTypeData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {

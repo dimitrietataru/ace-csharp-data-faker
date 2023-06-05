@@ -16,7 +16,7 @@ public class FakeDto
             .RuleFor(
                 person => person.Description,
                 func => func.Lorem.Sentence(wordCount: 10))
-        .StrictMode(ensureRulesForAllProperties: true);
+            .StrictMode(ensureRulesForAllProperties: true);
 }
 
 internal sealed class FooDto

@@ -20,7 +20,7 @@ public sealed partial class TypeExtensionsTests
         actual.Should().Be(expected);
     }
 
-    private class GenericTypeData : IEnumerable<object[]>
+    private sealed class GenericTypeData : IEnumerable<object[]>
     {
         public IEnumerator<object[]> GetEnumerator()
         {
