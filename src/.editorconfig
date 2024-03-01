@@ -810,3 +810,13 @@ dotnet_diagnostic.CA2261.severity = warning
 
 # Code Style | Formatting
 dotnet_diagnostic.IDE0055.severity = warning
+
+# Microsoft.CodeAnalysis Exceptions
+## CA1002: Do not expose generic lists
+[**[Ff]ake{r,}**.cs]
+dotnet_diagnostic.CA1002.severity = none
+
+# IDE.CodeAnalysis Exceptions
+## IDE0051: Remove unused private member
+[**[Ff]ake{r,}**.cs]
+dotnet_diagnostic.IDE0051.severity = none

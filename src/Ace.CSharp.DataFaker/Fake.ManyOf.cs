@@ -3,8 +3,6 @@ using Ace.CSharp.DataFaker.Internal.Symbols;
 
 namespace Ace.CSharp.DataFaker;
 
-#pragma warning disable CA1002 // Do not expose generic lists
-
 public static partial class Fake
 {
     /// <summary>
