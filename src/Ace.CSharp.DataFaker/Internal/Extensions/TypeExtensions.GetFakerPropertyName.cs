@@ -50,7 +50,7 @@ internal static partial class TypeExtensions
     private static string DetermineGenericShortName(Type type)
     {
         string typeName = type.Name;
-        int length = typeName.IndexOf("`", StringComparison.Ordinal);
+        int length = typeName.IndexOf('`', StringComparison.Ordinal);
 
         return typeName[..length];
     }
@@ -68,9 +68,9 @@ internal static partial class TypeExtensions
             { "UInt64", "ULong" },
         };
 
-        if (replacements.ContainsKey(type.Name))
+        if (replacements.TryGetValue(type.Name, out string? replacedTypeName))
         {
-            return replacements[type.Name];
+            return replacedTypeName;
         }
 
         return type.Name;
