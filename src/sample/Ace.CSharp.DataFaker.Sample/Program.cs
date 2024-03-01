@@ -1,5 +1,5 @@
 using Ace.CSharp.DataFaker;
-using Ace.CSharp.DataFaker.Sample.Definitions;
+using Ace.CSharp.DataFaker.Sample;
 using Ace.CSharp.DataFaker.Sample.Definitions.Dtos;
 using Ace.CSharp.DataFaker.Sample.Definitions.Entities;
 
@@ -30,8 +30,8 @@ using Ace.CSharp.DataFaker.Sample.Definitions.Entities;
 {
     Console.WriteLine("Generating Foo(s) using the Fake class..");
 
-    var foo = Fake.Of<Foo, FakeEntity>();
-    var foos = Fake.ManyOf<Foo, FakeEntity>();
+    var foo = Fake.Of<FooEntity, FakeEntity>();
+    var foos = Fake.ManyOf<FooEntity, FakeEntity>();
 
     Console.WriteLine($"Foo Id: {foo.Id}");
     Console.WriteLine($"Foos count: {foos.Count}");
@@ -41,8 +41,8 @@ using Ace.CSharp.DataFaker.Sample.Definitions.Entities;
 {
     Console.WriteLine("Generating Foo(s) using the wrapper (FakeEntity) around the Fake class..");
 
-    var foo = FakeEntity.Of<Foo>();
-    var foos = FakeEntity.ManyOf<Foo>();
+    var foo = FakeEntity.Of<FooEntity>();
+    var foos = FakeEntity.ManyOf<FooEntity>();
 
     Console.WriteLine($"Foo Id: {foo.Id}");
     Console.WriteLine($"Foos count: {foos.Count}");

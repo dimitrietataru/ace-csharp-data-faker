@@ -1,8 +1,6 @@
-using Ace.CSharp.DataFaker.Sample.Definitions.Dtos;
+namespace Ace.CSharp.DataFaker.Sample;
 
-namespace Ace.CSharp.DataFaker.Sample.Definitions;
-
-public sealed class FakeDto
+internal sealed class FakeEntity
 {
     private const string LocaleCode = "en_US";
     private const int DefaultCount = 3;
@@ -11,23 +9,23 @@ public sealed class FakeDto
     public static T Of<T>()
         where T : class
     {
-        return Fake.Of<T, FakeDto>();
+        return Fake.Of<T, FakeEntity>();
     }
 
     public static List<T> ManyOf<T>(int count = DefaultCount)
         where T : class
     {
-        return Fake.ManyOf<T, FakeDto>(count);
+        return Fake.ManyOf<T, FakeEntity>(count);
     }
 
     public static List<T> ManyOf<T>(int minCount, int maxCount)
         where T : class
     {
-        return Fake.ManyOf<T, FakeDto>(minCount, maxCount);
+        return Fake.ManyOf<T, FakeEntity>(minCount, maxCount);
     }
 
-    private static Faker<FooDto> FakeFooDto =>
-        new Faker<FooDto>(locale: LocaleCode)
+    private static Faker<FooEntity> FakeFoo =>
+        new Faker<FooEntity>(locale: LocaleCode)
             .RuleFor(
                 dto => dto.Id,
                 func => func.Random.Uuid())
@@ -39,7 +37,7 @@ public sealed class FakeDto
                 func => func.Lorem.Sentences())
             .RuleFor(
                 dto => dto.AvatarUrl,
-                func => func.Internet.Avatar())
+                func => new Uri(func.Internet.Avatar()))
             .RuleFor(
                 dto => dto.Index,
                 func => func.Random.Int(min: 1, max: int.MaxValue))
@@ -56,4 +54,20 @@ public sealed class FakeDto
                 dto => dto.IsActive,
                 func => func.Random.Bool())
             .StrictMode(ensureRulesForAllProperties: true);
+}
+
+internal sealed class FooEntity
+{
+    public Guid Id { get; set; }
+
+    public string Title { get; set; } = default!;
+    public string Description { get; set; } = default!;
+    public Uri AvatarUrl { get; set; } = default!;
+
+    public int Index { get; set; }
+    public decimal Size { get; set; }
+
+    public DateTimeOffset CreatedAt { get; set; }
+    public DateTimeOffset ExpiresAt { get; set; }
+    public bool IsActive { get; set; }
 }
