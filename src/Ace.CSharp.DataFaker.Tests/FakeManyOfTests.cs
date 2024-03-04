@@ -16,7 +16,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(Constants.ManyOfCount);
+        dtos.Should().NotBeEmpty().And.HaveCount(Constants.ManyOfCount);
     }
 
     [Fact]
@@ -30,7 +30,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(count);
+        dtos.Should().NotBeEmpty().And.HaveCount(count);
     }
 
     [Fact]
@@ -58,7 +58,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(Constants.ManyOfCount);
+        dtos.Should().NotBeEmpty().And.HaveCount(Constants.ManyOfCount);
     }
 
     [Fact]
@@ -72,7 +72,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(count);
+        dtos.Should().NotBeEmpty().And.HaveCount(count);
     }
 
     [Fact]
@@ -139,7 +139,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(Constants.ManyOfCount);
+        dtos.Should().NotBeEmpty().And.HaveCount(Constants.ManyOfCount);
     }
 
     [Fact]
@@ -153,7 +153,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<FooDto>>();
-        dtos.Should().HaveCount(count);
+        dtos.Should().NotBeEmpty().And.HaveCount(count);
     }
 
     [Fact]
@@ -181,7 +181,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<BarDto>>();
-        dtos.Should().HaveCount(Constants.ManyOfCount);
+        dtos.Should().NotBeEmpty().And.HaveCount(Constants.ManyOfCount);
     }
 
     [Fact]
@@ -195,7 +195,7 @@ public sealed class FakeManyOfTests
 
         // Assert
         dtos.Should().NotBeNull().And.BeOfType<List<BarDto>>();
-        dtos.Should().HaveCount(count);
+        dtos.Should().NotBeEmpty().And.HaveCount(count);
     }
 
     [Fact]

@@ -32,7 +32,7 @@ public static partial class Fake
 
     /// <summary>
     ///     <para>Generates an instance of <see cref="List{}"/>.</para>
-    ///     Uses the configuration defined in the <see cref="{TContainer}"/> class.
+    ///     <para>Uses the configuration defined in the <see cref="{TContainer}"/> class.</para>
     /// </summary>
     /// <param name="count">The number of items to create</param>
     /// <typeparam name="TResult">The type of the result</typeparam>
