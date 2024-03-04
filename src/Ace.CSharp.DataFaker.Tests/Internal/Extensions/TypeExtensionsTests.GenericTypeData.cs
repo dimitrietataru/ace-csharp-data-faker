@@ -2,8 +2,6 @@ using Ace.CSharp.DataFaker.Internal.Extensions;
 
 namespace Ace.CSharp.DataFaker.Tests.Internal.Extensions;
 
-#pragma warning disable CA1812 // Avoid uninstantiated internal classes
-
 public sealed partial class TypeExtensionsTests
 {
     [Theory]

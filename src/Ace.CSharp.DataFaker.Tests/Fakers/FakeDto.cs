@@ -2,8 +2,6 @@ using Bogus;
 
 namespace Ace.CSharp.DataFaker.Tests.Fakers;
 
-#pragma warning disable CA1812 // Avoid uninstantiated internal classes
-
 public class FakeDto
 {
     private const string LocaleCode = "en_US";

@@ -815,6 +815,11 @@ dotnet_diagnostic.IDE0055.severity = warning
 ## CA1002: Do not expose generic lists
 [**[Ff]ake{r,}**.cs]
 dotnet_diagnostic.CA1002.severity = none
+##Avoid uninstantiated internal classes
+[**Sample**.cs]
+dotnet_diagnostic.CA1812.severity = none
+[**[Tt]est**.cs]
+dotnet_diagnostic.CA1812.severity = none
 
 # IDE.CodeAnalysis Exceptions
 ## IDE0051: Remove unused private member
