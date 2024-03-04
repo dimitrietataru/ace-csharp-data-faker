@@ -22,7 +22,7 @@ public static partial class Fake
     /// <typeparam name="TResult">The type of the result</typeparam>
     /// <typeparam name="TContainer">The type of the lookup class containing the <see cref="Faker{T}"/> configuration</typeparam>
     /// <returns>An instance of <see cref="{TResult}"/></returns>
-    /// <exception cref="Exceptions.FakerNotFoundException{TResult}"></exception>
+    /// <exception cref="Exceptions.StaticFakerNotFoundException{TResult}"></exception>
     public static TResult Of<TResult, TContainer>()
         where TResult : class
     {

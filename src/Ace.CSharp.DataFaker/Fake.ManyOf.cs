@@ -38,7 +38,7 @@ public static partial class Fake
     /// <typeparam name="TResult">The type of the result</typeparam>
     /// <typeparam name="TContainer">The type of the lookup class containing the <see cref="Faker{}"/> configuration</typeparam>
     /// <returns>An instance of <see cref="List{}"/></returns>
-    /// <exception cref="Exceptions.FakerNotFoundException{TResult}"></exception>
+    /// <exception cref="Exceptions.StaticFakerNotFoundException{TResult}"></exception>
     public static List<TResult> ManyOf<TResult, TContainer>(int count = Constants.ManyOfCount)
         where TResult : class
     {
@@ -54,7 +54,7 @@ public static partial class Fake
     /// <typeparam name="TResult">The type of the result</typeparam>
     /// <typeparam name="TContainer">The type of the lookup class containing the <see cref="Faker{}"/> configuration</typeparam>
     /// <returns>An instance of <see cref="List{}"/></returns>
-    /// <exception cref="Exceptions.FakerNotFoundException{TResult}"></exception>
+    /// <exception cref="Exceptions.StaticFakerNotFoundException{TResult}"></exception>
     public static List<TResult> ManyOf<TResult, TContainer>(int minCount, int maxCount)
         where TResult : class
     {

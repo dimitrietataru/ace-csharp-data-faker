@@ -99,7 +99,7 @@ public sealed class FakeManyOfTests
         var action = () => Fake.ManyOf<BarDto, FakeDto>();
 
         // Assert
-        action.Should().Throw<FakerNotFoundException<BarDto>>();
+        action.Should().Throw<StaticFakerNotFoundException<BarDto>>();
     }
 
     [Fact]
@@ -112,7 +112,7 @@ public sealed class FakeManyOfTests
         var action = () => Fake.ManyOf<BarDto, FakeDto>(count);
 
         // Assert
-        action.Should().Throw<FakerNotFoundException<BarDto>>();
+        action.Should().Throw<StaticFakerNotFoundException<BarDto>>();
     }
 
     [Fact]
@@ -126,7 +126,7 @@ public sealed class FakeManyOfTests
         var action = () => Fake.ManyOf<BarDto, FakeDto>(minCount, maxCount);
 
         // Assert
-        action.Should().Throw<FakerNotFoundException<BarDto>>();
+        action.Should().Throw<StaticFakerNotFoundException<BarDto>>();
     }
 
     [Fact]

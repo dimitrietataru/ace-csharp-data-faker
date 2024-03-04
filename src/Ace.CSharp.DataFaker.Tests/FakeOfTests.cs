@@ -38,7 +38,7 @@ public sealed class FakeOfTests
         var action = () => Fake.Of<BarDto, FakeDto>();
 
         // Assert
-        action.Should().Throw<FakerNotFoundException<BarDto>>();
+        action.Should().Throw<StaticFakerNotFoundException<BarDto>>();
     }
 
     [Fact]
