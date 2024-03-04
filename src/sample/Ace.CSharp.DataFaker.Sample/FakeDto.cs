@@ -1,5 +1,43 @@
 namespace Ace.CSharp.DataFaker.Sample;
 
+internal sealed class DtoFaker : AbstractDataFaker<DtoFaker>
+{
+    protected sealed override string LocaleCode => base.LocaleCode;
+    protected sealed override int DefaultCount => base.DefaultCount;
+    protected sealed override DateTime RefDate => base.RefDate;
+
+    private Faker<FooDto> FakeFooDto =>
+        new Faker<FooDto>(locale: LocaleCode)
+            .RuleFor(
+                dto => dto.Id,
+                func => func.Random.Uuid())
+            .RuleFor(
+                dto => dto.Title,
+                func => func.Lorem.Sentence())
+            .RuleFor(
+                dto => dto.Description,
+                func => func.Lorem.Sentences())
+            .RuleFor(
+                dto => dto.AvatarUrl,
+                func => new Uri(func.Internet.Avatar()))
+            .RuleFor(
+                dto => dto.Index,
+                func => func.Random.Int(min: 1, max: int.MaxValue))
+            .RuleFor(
+                dto => dto.Size,
+                func => func.Random.Decimal(min: 1.0M, max: 10.0M))
+            .RuleFor(
+                dto => dto.CreatedAt,
+                func => func.Date.PastOffset(yearsToGoBack: 1, RefDate))
+            .RuleFor(
+                dto => dto.ExpiresAt,
+                func => func.Date.FutureOffset(yearsToGoForward: 1, RefDate))
+            .RuleFor(
+                dto => dto.IsActive,
+                func => func.Random.Bool())
+            .StrictMode(ensureRulesForAllProperties: true);
+}
+
 internal sealed class FakeDto
 {
     private const string LocaleCode = "en_US";

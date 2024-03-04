@@ -24,7 +24,7 @@ internal sealed class FakeEntity
         return Fake.ManyOf<T, FakeEntity>(minCount, maxCount);
     }
 
-    private static Faker<FooEntity> FakeFoo =>
+    private static Faker<FooEntity> FakeFooEntity =>
         new Faker<FooEntity>(locale: LocaleCode)
             .RuleFor(
                 dto => dto.Id,

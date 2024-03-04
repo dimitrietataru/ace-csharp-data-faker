@@ -47,4 +47,17 @@ using Ace.CSharp.DataFaker.Sample;
     Console.WriteLine();
 }
 
+{
+    Console.WriteLine("Generating FooDto(s) using the Instance class..");
+
+    var faker = new DtoFaker();
+
+    var fooDto = faker.Of<FooDto>();
+    var fooDtos = faker.ManyOf<FooDto>();
+
+    Console.WriteLine($"Foo Id: {fooDto.Id}");
+    Console.WriteLine($"Foos count: {fooDtos.Count}");
+    Console.WriteLine();
+}
+
 Console.ReadKey();
