@@ -1,7 +1,5 @@
 using Ace.CSharp.DataFaker;
 using Ace.CSharp.DataFaker.Sample;
-using Ace.CSharp.DataFaker.Sample.Definitions.Dtos;
-using Ace.CSharp.DataFaker.Sample.Definitions.Entities;
 
 #pragma warning disable CA1303 // Do not pass literals as localized parameters
 
