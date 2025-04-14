@@ -2,7 +2,7 @@ using Bogus;
 
 namespace Ace.CSharp.DataFaker.Tests.Fakers;
 
-public sealed class FakeDto
+internal sealed class FakeDto
 {
     private const string LocaleCode = "en_US";
 

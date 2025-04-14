@@ -2,7 +2,7 @@ using Bogus;
 
 namespace Ace.CSharp.DataFaker.Tests.Fakers;
 
-public sealed class FakeEntity : AbstractDataFaker<FakeEntity>
+internal sealed class FakeEntity : AbstractDataFaker<FakeEntity>
 {
     private Faker<FooEntity> FakeFooEntity =>
         new Faker<FooEntity>(locale: LocaleCode)
