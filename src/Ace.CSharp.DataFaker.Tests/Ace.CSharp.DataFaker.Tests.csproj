@@ -3,17 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <OutputType>Exe</OutputType>
-    <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
 
-    <Nullable>enable</Nullable>
-    <WarningsAsErrors>nullable</WarningsAsErrors>
-    <ImplicitUsings>disable</ImplicitUsings>
-
     <PackageId>AceCSharp.DataFaker.Tests</PackageId>
-    <Version>2.0.0</Version>
-    <Authors>Dimitrie Tataru</Authors>
-    <Company>A C E</Company>
+    <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,15 +14,14 @@
     <PackageReference Include="xunit.v3" Version="4.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <PackageReference Include="Microsoft.CodeAnalysis.NetAnalyzers" Version="10.0.403">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+  <ItemGroup>
+    <ProjectReference Include="..\Ace.CSharp.DataFaker\Ace.CSharp.DataFaker.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Ace.CSharp.DataFaker\Ace.CSharp.DataFaker.csproj" />
+    <None Update="xunit.runner.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
