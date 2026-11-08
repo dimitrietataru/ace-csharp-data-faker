@@ -27,7 +27,7 @@ internal static partial class TypeExtensions
 
         string argName = type
             .GetGenericArguments()
-            .Select(inner => GetFakerPropertyName(inner))
+            .Select(GetFakerPropertyName)
             .JoinToString(And);
 
         return $"{typeName}{Of}{argName}";

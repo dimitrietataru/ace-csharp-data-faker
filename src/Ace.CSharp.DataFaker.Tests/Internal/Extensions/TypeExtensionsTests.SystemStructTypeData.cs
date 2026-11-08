@@ -18,13 +18,13 @@ public sealed partial class TypeExtensionsTests
         actual.Should().Be(expected);
     }
 
-    private sealed class SystemStructTypeData : IEnumerable<object[]>
+    private sealed class SystemStructTypeData : IEnumerable<TheoryDataRow<Type, string>>
     {
-        public IEnumerator<object[]> GetEnumerator()
+        public IEnumerator<TheoryDataRow<Type, string>> GetEnumerator()
         {
-            yield return new object[] { typeof(DateTime), "DateTime" };
-            yield return new object[] { typeof(DateOnly), "DateOnly" };
-            yield return new object[] { typeof(Guid), "Guid" };
+            yield return new(typeof(DateTime), "DateTime");
+            yield return new(typeof(DateOnly), "DateOnly");
+            yield return new(typeof(Guid), "Guid");
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();

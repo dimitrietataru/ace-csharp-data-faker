@@ -1,4 +1,4 @@
-﻿using Ace.CSharp.DataFaker.Exceptions.Abstractions;
+using Ace.CSharp.DataFaker.Exceptions.Abstractions;
 
 namespace Ace.CSharp.DataFaker.Exceptions;
 

@@ -18,25 +18,25 @@ public sealed partial class TypeExtensionsTests
         actual.Should().Be(expected);
     }
 
-    private sealed class SystemValueTypeData : IEnumerable<object[]>
+    private sealed class SystemValueTypeData : IEnumerable<TheoryDataRow<Type, string>>
     {
-        public IEnumerator<object[]> GetEnumerator()
+        public IEnumerator<TheoryDataRow<Type, string>> GetEnumerator()
         {
-            yield return new object[] { typeof(bool), "Boolean" };
-            yield return new object[] { typeof(byte), "Byte" };
-            yield return new object[] { typeof(char), "Char" };
-            yield return new object[] { typeof(decimal), "Decimal" };
-            yield return new object[] { typeof(double), "Double" };
-            yield return new object[] { typeof(short), "Short" };
-            yield return new object[] { typeof(int), "Int" };
-            yield return new object[] { typeof(long), "Long" };
-            yield return new object[] { typeof(nint), "IntPtr" };
-            yield return new object[] { typeof(nuint), "UIntPtr" };
-            yield return new object[] { typeof(sbyte), "SByte" };
-            yield return new object[] { typeof(float), "Float" };
-            yield return new object[] { typeof(ushort), "UShort" };
-            yield return new object[] { typeof(uint), "UInt" };
-            yield return new object[] { typeof(ulong), "ULong" };
+            yield return new(typeof(bool), "Boolean");
+            yield return new(typeof(byte), "Byte");
+            yield return new(typeof(char), "Char");
+            yield return new(typeof(decimal), "Decimal");
+            yield return new(typeof(double), "Double");
+            yield return new(typeof(short), "Short");
+            yield return new(typeof(int), "Int");
+            yield return new(typeof(long), "Long");
+            yield return new(typeof(nint), "IntPtr");
+            yield return new(typeof(nuint), "UIntPtr");
+            yield return new(typeof(sbyte), "SByte");
+            yield return new(typeof(float), "Float");
+            yield return new(typeof(ushort), "UShort");
+            yield return new(typeof(uint), "UInt");
+            yield return new(typeof(ulong), "ULong");
         }
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
